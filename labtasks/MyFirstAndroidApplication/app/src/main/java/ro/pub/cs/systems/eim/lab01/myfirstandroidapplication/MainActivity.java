@@ -1,5 +1,6 @@
 package ro.pub.cs.systems.eim.lab01.myfirstandroidapplication;
 
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -41,5 +42,17 @@ public class MainActivity extends AppCompatActivity {
 
         Button submitButton = (Button)findViewById(R.id.submit_button);
         submitButton.setOnClickListener(buttonClickListener);
+
+        Button exitButton = (Button)findViewById(R.id.exit_button);
+        exitButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                // TODO Auto-generated method stub
+                finish();
+                System.exit(0);
+            }
+        });
     }
 }
